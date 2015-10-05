@@ -7,7 +7,7 @@ This repository is organized as a vim plugin, ideally installed using
 [pathogen.vim](https://github.com/tpope/vim-pathogen) like so:
 
     cd ~/.vim/bundle
-    git clone git://github.com/dgtombs/vimconfig.git dtvim
+    git clone https://github.com/dgtombs/vimconfig.git dtvim
 
 After executing those commands, all new vim instances will pick up these
 settings.
