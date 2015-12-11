@@ -40,6 +40,9 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" 18-Sep-2015, avoid slowness on very long lines
+set synmaxcol=200
+
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -102,6 +105,16 @@ if !exists(":DiffOrig")
 endif
 
 runtime! macros/matchit.vim
+
+" 17-Dec-2011
+iabbrev <expr> HDATE strftime("%d-%b-%Y")
+
+" 12-feb-2011
+command SvnDiff new | set bt=nofile | r !svn diff #
+
+" dgt 27 nov 2009
+" generates a OmniCppComplete ctags database for current directory
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "  A few ideas from derekwyatt.org
 nmap <silent> ,ev :e $MYVIMRC<cr>
