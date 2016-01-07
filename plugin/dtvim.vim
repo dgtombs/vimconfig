@@ -58,6 +58,13 @@ nnoremap Y y$
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
+if has("win32") || has("win16")
+    " This should be the default, but Git Bash causes it to direct to bash--which would
+    " normally be good, but the space in the path screws it up.
+    set shell=C:\WINDOWS\system32\cmd.exe
+    set shellcmdflag=/c
+endif
+
 " ### Filetype-specific options ###
 
 " Only do this part when compiled with support for autocommands.
