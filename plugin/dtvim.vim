@@ -23,6 +23,7 @@ set showcmd		" display incomplete commands
 set scrolloff=1
 " 03-Jun-2015, used to be 80 but screens are wider now!
 set textwidth=90
+set shiftwidth=4        " I almost never use the default 8.
 set diffopt+=iwhite     " Ignore whitespace in diffs.
 set wildmenu
 
