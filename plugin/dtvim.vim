@@ -26,6 +26,7 @@ set textwidth=90
 set shiftwidth=4        " I almost never use the default 8.
 set diffopt+=iwhite     " Ignore whitespace in diffs.
 set wildmenu
+set nrformats-=octal    " I don't use CTRL-A, but take a sensible idea from sensible.vim
 
 set background=dark     " My backgrounds are usually dark.
 
@@ -115,6 +116,7 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" Extend the % key to jump to matching HTML tags, etc. (Script included with Vim.)
 runtime! macros/matchit.vim
 
 " 17-Dec-2011
