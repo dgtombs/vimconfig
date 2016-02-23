@@ -27,6 +27,8 @@ set shiftwidth=4        " I almost never use the default 8.
 set diffopt+=iwhite     " Ignore whitespace in diffs.
 set wildmenu
 set nrformats-=octal    " I don't use CTRL-A, but take a sensible idea from sensible.vim
+set autoindent          " Indent something if 'indentexpr' empty.
+set smarttab            " I think I like this, but not totally sure yet.
 
 set background=dark     " My backgrounds are usually dark.
 
