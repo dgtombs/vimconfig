@@ -23,6 +23,11 @@ set showcmd		" display incomplete commands
 set scrolloff=1
 " 03-Jun-2015, used to be 80 but screens are wider now!
 set textwidth=90
+" And expand the gvim window accordingly.
+if has("gui_running")
+    set columns=90
+    set lines=40
+endif
 set shiftwidth=4        " I almost never use the default 8.
 set diffopt+=iwhite     " Ignore whitespace in diffs.
 set wildmenu
@@ -50,6 +55,11 @@ set synmaxcol=200
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 let &guioptions = substitute(&guioptions, "t", "", "g")
+
+if has("gui_running") && &diff
+    " More columns by default when started in diff mode.
+    set columns=186
+endif
 
 " ### Preferred behavior changes ###
 
