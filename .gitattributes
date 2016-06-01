@@ -1,0 +1,9 @@
+# Everything in this repository is text. Allow Git to perform line normalization.
+# (Still use auto in case I add a binary file and forget to update this file.)
+#
+# This is better than relying on core.autocrlf because:
+#
+# 1) That value can be different everywhere.
+# 2) This allows me to use core.eol to specify which line endings git will use for a
+#    particular checkout.
+* text=auto
