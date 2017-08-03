@@ -50,6 +50,11 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" Use the 'torte' colorscheme in the GUI.
+if has("gui_running")
+    colorscheme torte
+endif
+
 " 18-Sep-2015, avoid slowness on very long lines
 set synmaxcol=200
 
