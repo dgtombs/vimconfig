@@ -137,6 +137,9 @@ endif
 " Extend the % key to jump to matching HTML tags, etc. (Script included with Vim.)
 runtime! macros/matchit.vim
 
+" Load man ftplugin so we can use :Man
+runtime! ftplugin/man.vim
+
 " 17-Dec-2011
 iabbrev <expr> HDATE strftime("%d-%b-%Y")
 
